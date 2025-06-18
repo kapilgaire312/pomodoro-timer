@@ -1,44 +1,48 @@
-
-p, h1{
+p,
+h1 {
   padding: 0;
   margin: 0;
 }
 
 
-#title{
+#title {
   text-align: center;
   font-size: 80px;
   font-family: Courier, monospace;
   text-decoration: underline;
-  background-color:beige;
-  
-}
-body{
-  padding-bottom: 0;
-  
+  background-color: beige;
+
 }
 
-#container-containing-div{
+body {
+  padding-bottom: 0;
+
+
+}
+
+#container-containing-div {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  
+
   margin-top: 2%;
   margin-left: 2%;
   margin-right: 2%;
 }
 
 
-#container-left-div,#container-right-div{
+#container-left-div,
+#container-right-div {
   display: flex;
   flex-direction: column;
-  
+
   justify-content: center;
   gap: 100px;
 
 }
 
-#container-left-div button,#container-right-div button{
+#container-left-div button,
+#container-right-div button {
   border-radius: 50%;
   background-color: aquamarine;
   height: 25%;
@@ -47,13 +51,13 @@ body{
 
 
 #container-left-div button:hover,
-#container-right-div button:hover{
-  opacity:0.7;
+#container-right-div button:hover {
+  opacity: 0.7;
 }
 
 #container-left-div button:active,
-#container-right-div button:active{
-  opacity:0.5;
+#container-right-div button:active {
+  opacity: 0.5;
 }
 
 
@@ -61,32 +65,32 @@ body{
 #container-right-div button.clicked-button {
   opacity: 0.3;
   background-color: gray;
-  
+
 }
 
 
 
-.container{
+.container {
   width: 60vw;
-  
+
   text-align: center;
   padding-top: 1%;
-  box-shadow: 2px 4px 10px rgb(14, 13, 13,5);
+  box-shadow: 2px 4px 10px rgb(14, 13, 13, 5);
   background-color: azure;
-  
-  
+
+
   font-size: 5vw;
-  
-  
+
+
 
 }
 
 
-button{
+button {
   font-size: 40px;
 }
 
-#timeStamp{
+#timeStamp {
   border: solid;
   width: 50%;
   margin-left: 25%;
@@ -94,18 +98,19 @@ button{
 
 }
 
-#workTime ,#breakTime{
+#workTime,
+#breakTime {
   font-size: 3rem;
   width: 25%;
 }
 
 
-#ongoingTime{
+#ongoingTime {
   font-size: 3rem;
 }
 
 
-#timeToSet{
+#timeToSet {
   display: flex;
   justify-content: center;
   gap: 10%;
@@ -113,50 +118,53 @@ button{
   margin-bottom: 5%;
 }
 
-.timeParagraph{
+.timeParagraph {
   font-size: 2rem;
 }
 
 
 
 
-.hide{
+.hide {
   display: none;
 
 }
 
-#timeStamp.active{
-  
+#timeStamp.active {
+
   position: absolute;
   right: 20vw;
-  top:17vw;
+  top: 17vw;
   width: 35%;
   border: none;
   font-size: 6vw;
-  background-color:transparent;
+  background-color: transparent;
 
 }
-.div-position{
+
+.div-position {
   position: relative;
 
-  
+
 }
-#tomato{
+
+#tomato {
   width: 37vw;
 }
 
 
-.tomato-hide{
+.tomato-hide {
   display: none;
 }
 
-#time-bar-progress{
+#time-bar-progress {
   background-color: aqua;
   width: 0%;
   border-radius: 10px;
   height: 100%;
 }
-#time-bar-container{
+
+#time-bar-container {
   background-color: gray;
   width: 90%;
   height: 2vw;
@@ -166,7 +174,7 @@ button{
 }
 
 
-#time-bar{
+#time-bar {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -175,13 +183,14 @@ button{
   justify-content: space-between;
   align-items: center;
   width: 25vw;
-  
-  
+
+
 }
-.time-bar-hide{
+
+.time-bar-hide {
   display: none;
 }
 
-#volume-paragraph{
+#volume-paragraph {
   font-size: 30px;
 }

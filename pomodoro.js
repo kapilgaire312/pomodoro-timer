@@ -1,9 +1,13 @@
+const setTimer = document.getElementById('initialsetTimeButton')
+setTimer.onclick = setTime
+
 function setTime() {
-  console.log('running')
+
   const parentDiv = document.getElementById('timeToSet');
 
 
   if (!parentDiv.innerHTML) {
+
     const workTime = document.createElement('input');
     const breakTime = document.createElement('input');
     const workTimeParagraph = document.createElement('p');
@@ -21,7 +25,7 @@ function setTime() {
 
     workTimeParagraph.textContent = 'Enter the Focus Time:'
     breakTimeParagraph.textContent = 'Enter the Break Time:'
-
+    console.log('reavhed')
     workTimeParagraph.classList.add('timeParagraph');
     breakTimeParagraph.classList.add('timeParagraph');
 
@@ -41,26 +45,40 @@ function setTime() {
 
 
     const forButton = document.getElementById('forButton');
-    const Button = document.createElement('button');
-    Button.textContent = 'Set Time';
-    Button.id = 'finalSetTimeButton';
-    Button.onclick = recordTime;
-    forButton.appendChild(Button);
+    const button = document.createElement('button');
+
+    button.textContent = 'Set Time';
+    button.id = 'finalSetTimeButton';
+
+
+    button.onclick = recordTime;
+
+
+    forButton.appendChild(button);
 
   }
 }
 
 
 function goBack() {
+  console.log('go back')
   const initialButton = document.getElementById('goBackButoon');
   const parentDiv = document.getElementById('timeToSet');
   const forButton = document.getElementById('forButton');
+  if (initialButton) {
 
-  initialButton.textContent = 'Set Time';
-  initialButton.onclick = setTime;
-  initialButton.id = 'initialsetTimeButton'
+    initialButton.textContent = 'Set Time';
+
+
+
+    initialButton.onclick = setTime;
+    initialButton.id = 'initialsetTimeButton'
+
+  }
+
   parentDiv.innerHTML = '';
   forButton.innerHTML = '';
+
 
 }
 
@@ -69,6 +87,7 @@ function recordTime() {
   const workTime = document.getElementById('workTime');
   const breakTime = document.getElementById('breakTime');
   const tickingAudio = document.getElementById('tickingAudio');
+
 
 
 
@@ -167,6 +186,7 @@ function workTimeTick(workTime, breakTime) {
   const resetButton = document.getElementById('Reset-button');
   resetButton.onclick = () => {
     goBack();
+
     document.getElementById('button-div').classList.toggle('hide');
     document.getElementById('timeStamp').classList.toggle('active');
     document.getElementById('tomato').classList.toggle('tomato-hide');
@@ -359,3 +379,17 @@ volumeInput.addEventListener('input', () => {
 
 
 
+
+const title = document.getElementById('title');
+title.addEventListener('click', () => {
+  goBack();
+
+  if (!document.getElementById('tomato').classList.contains('tomato-hide')) {
+
+    location.reload();
+
+  }
+
+
+
+})
